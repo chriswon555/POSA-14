@@ -63,7 +63,12 @@ public class AndroidPlatformStrategy extends PlatformStrategy {
     /** Indicate that a game thread has finished running. */
     public void done() {
         // TODO - You fill in here.
-        mLatch.countDown();
+        ((Activity) mActivity.get()).runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                mLatch.countDown();
+            }
+        });
     }
 
     /** Barrier that waits for all the game threads to finish. */
