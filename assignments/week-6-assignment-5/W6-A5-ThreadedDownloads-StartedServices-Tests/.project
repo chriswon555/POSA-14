@@ -3,6 +3,7 @@
 	<name>W6-A5-ThreadedDownloads-StartedServices-Tests</name>
 	<comment></comment>
 	<projects>
+		<project>W6-A5-ThreadedDownloads-StartedServices</project>
 		<project>week-6-assignment-5</project>
 	</projects>
 	<buildSpec>
